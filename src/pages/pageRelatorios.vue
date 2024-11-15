@@ -108,18 +108,4 @@ export default {
 .library-reports-page {
   position: relative;
 }
-
-.back-button {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 16px;
-}
-
-.back-button .v-icon {
-  margin-right: 8px;
-}
 </style>

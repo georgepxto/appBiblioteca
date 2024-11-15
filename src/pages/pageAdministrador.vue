@@ -10,9 +10,6 @@
 
         <div class="d-flex align-center">
           <v-chip size="small" class="me-4"> Administrador </v-chip>
-          <v-btn color="white" variant="text" prepend-icon="mdi-logout">
-            Sair
-          </v-btn>
         </div>
       </div>
     </v-sheet>
@@ -149,34 +146,32 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-// Função para redirecionar
 const pageCatalogo = () => {
-  router.push("./pageCatalogo");
+  router.push("/pageCatalogo");
 };
 const pageEmprestarLivro = () => {
-  router.push("./pageEmprestarLivro");
+  router.push("/pageEmprestarLivro");
 };
 const pageFilaEmprestimo = () => {
-  router.push("./pageFilaEmprestimo");
+  router.push("/pageFilaEmprestimo");
 };
-
 const pagePesquisaLivro = () => {
-  router.push("./pagePesquisaLivro");
+  router.push("/pagePesquisaLivro");
 };
 const pageRelatorios = () => {
-  router.push("./pageRelatorios");
+  router.push("/pageRelatorios");
 };
 const pageVisaoGeral = () => {
-  router.push("./pageVisaoGeral");
+  router.push("/pageVisaoGeral");
 };
 const pageCadastrarUsuario = () => {
-  router.push("./pageCadastrarUsuario");
+  router.push("/pageCadastrarUsuario");
 };
 const pageCadastrarLivro = () => {
-  router.push("./pageCadastrarLivro");
+  router.push("/pageCadastrarLivro");
 };
 const pageRemoverLivro = () => {
-  router.push("./pageRemoverLivro");
+  router.push("/pageRemoverLivro");
 };
 </script>
 

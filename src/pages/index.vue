@@ -170,6 +170,10 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+
+// Inicializando o router
+const router = useRouter();
 
 // Estados do formulário
 const userType = ref("");
@@ -194,8 +198,6 @@ const userTypes = [
   { title: "Funcionário", value: "employee" },
 ];
 
-// Links rápidos para o footer
-
 // Funções
 const handleLogin = async () => {
   if (!isFormValid.value) return;
@@ -204,7 +206,7 @@ const handleLogin = async () => {
 
   try {
     // Simula um delay de processamento
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     // Simula uma validação básica
     if (username.value === "admin" && password.value === "admin123") {
@@ -213,8 +215,12 @@ const handleLogin = async () => {
         text: "Login realizado com sucesso!",
         color: "success",
       };
-      // Aqui você redirecionaria para a página principal
-      console.log("Login bem-sucedido!");
+
+      // Aguarda um pequeno delay para mostrar a mensagem de sucesso
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // Redireciona para a página do administrador
+      router.push("/pageAdministrador");
     } else {
       snackbar.value = {
         show: true,
