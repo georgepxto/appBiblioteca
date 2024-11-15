@@ -1,14 +1,6 @@
 <template>
   <div class="library-reports-page">
-    <v-btn
-      class="back-button ms-10 mt-n10"
-      color="secondary"
-      variant="outlined"
-      @click="goBackToAdminPage"
-    >
-      <v-icon>mdi-arrow-left</v-icon>
-      Voltar
-    </v-btn>
+    <botao></botao>
     <v-card class="mx-auto mb-15 mt-15" max-width="800">
       <v-card-title>Relatórios da Biblioteca</v-card-title>
       <v-card-text>

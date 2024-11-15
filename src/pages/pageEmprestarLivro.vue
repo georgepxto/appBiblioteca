@@ -1,13 +1,5 @@
 <template>
-  <v-btn
-    class="back-button ms-10 mt-10"
-    color="secondary"
-    variant="outlined"
-    @click="goBackToAdminPage"
-  >
-    <v-icon>mdi-arrow-left</v-icon>
-    Voltar
-  </v-btn>
+  <botao></botao>
   <v-card class="mx-auto mb-15 mt-5" max-width="600">
     <v-card-title>Empréstimo de Livros</v-card-title>
     <v-card-text>
