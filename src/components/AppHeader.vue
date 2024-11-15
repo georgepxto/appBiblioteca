@@ -5,7 +5,11 @@
         <img :src="logo" alt="Logo" width="90px" height="70px" />
       </div>
 
-      <v-app-bar-title class="text-uppercase font-weight-bold">
+      <v-app-bar-title
+        class="text-uppercase font-weight-bold cursor-pointer"
+        style="cursor: pointer"
+        @click="goToAdmin"
+      >
         Protótipo - Biblioteca
       </v-app-bar-title>
     </div>
@@ -47,16 +51,6 @@
 
     <!-- Botões para telas maiores -->
     <div class="d-none d-md-flex">
-      <!-- <v-btn variant="text" to="/pageVisaoGeral" class="text-white me-2">
-        <v-icon start>mdi-view-dashboard</v-icon>
-        Visão Geral
-      </v-btn>
-
-      <v-btn variant="text" to="/pageCatalogo" class="text-white me-2">
-        <v-icon start>mdi-book-multiple</v-icon>
-        Catálogo
-      </v-btn> -->
-
       <v-btn variant="text" to="/pagePesquisaLivro" class="text-white me-2">
         <v-icon start>mdi-magnify</v-icon>
         Pesquisar
@@ -79,4 +73,14 @@ const router = useRouter();
 const handleLogout = () => {
   router.push("/");
 };
+
+const goToAdmin = () => {
+  router.push("/pageAdministrador");
+};
 </script>
+
+<style scoped>
+.cursor-pointer {
+  cursor: pointer;
+}
+</style>
